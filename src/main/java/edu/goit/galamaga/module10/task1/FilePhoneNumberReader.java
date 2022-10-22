@@ -1,6 +1,7 @@
 package edu.goit.galamaga.module10.task1;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -19,7 +20,7 @@ public class FilePhoneNumberReader {
 
     private static List<String> getPhoneNumbers() {
 
-        LinkedList<String> phoneNumbers = new LinkedList<>();
+        ArrayList<String> phoneNumbers = new ArrayList<>();
 
         try (FileReader fileReader = new FileReader("src/main/resources/PhoneNumbers.txt");
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
