@@ -1,5 +1,6 @@
-package edu.goit.galamaga.module10.task1;
+package edu.goit.galamaga.module10.task3;
 
+import edu.goit.galamaga.module10.task1.FilePhoneNumberReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +10,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FilePhoneNumberReaderTest {
+class WordsCounterTest {
 
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
@@ -19,13 +20,14 @@ class FilePhoneNumberReaderTest {
     }
 
     @Test
-    void getPhoneNumbersTest() {
+    void countWordsTest() {
 
-        String expected = "987-123-4567\r\n(123) 456-7890";
-        FilePhoneNumberReader.printPhoneNumToConsole();
+        String expected = "the 4\r\nday 1\r\nis 3\r\nsunny 2";
+
+        WordsCounter.countWords();
 
         Assertions.assertEquals(expected, outputStreamCaptor.toString().trim());
-    }
 
+    }
 
 }
