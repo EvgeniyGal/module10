@@ -9,17 +9,16 @@ public class UserConverterTXTToJSON {
 
     public static void convertTXTToJSON() {
 
-        LinkedList<User> users = new LinkedList<User>();
+        LinkedList<User> users = new LinkedList<>();
 
         try (var fileReader = new FileReader("src/main/resources/User.txt");
-                var bufferedReader = new BufferedReader(fileReader);
-                ) {
+             var bufferedReader = new BufferedReader(fileReader)) {
 
-            while (bufferedReader.ready()){
+            while (bufferedReader.ready()) {
 
                 String line = bufferedReader.readLine();
 
-                if (!line.contains("name age")){
+                if (!line.contains("name age")) {
                     String[] data = line.strip().split(" ");
                     users.add(new User(data[0], Integer.parseInt(data[1])));
                 }
@@ -30,7 +29,7 @@ public class UserConverterTXTToJSON {
             System.out.println(e.getMessage());
         }
 
-        try (var fileWriter =  new FileWriter("src/main/resources/User.json")) {
+        try (var fileWriter = new FileWriter("src/main/resources/User.json")) {
 
             fileWriter.write(new Gson().toJson(users));
             fileWriter.flush();
@@ -44,28 +43,14 @@ public class UserConverterTXTToJSON {
 
     private static class User {
 
-        private String name;
-        private int age;
+        private final String name;
+        private final int age;
 
         public User(String name, int age) {
             this.name = name;
             this.age = age;
         }
 
-        public String getName() {
-            return name;
-        }
 
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
     }
 }
