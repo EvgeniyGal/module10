@@ -1,14 +1,11 @@
 package edu.goit.galamaga.module10.task3;
 
-import edu.goit.galamaga.module10.task1.FilePhoneNumberReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class WordsCounterTest {
 

@@ -2,7 +2,6 @@ package edu.goit.galamaga.module10.task1;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

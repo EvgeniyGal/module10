@@ -19,7 +19,7 @@ public class WordsCounter {
              var bufferedReader = new BufferedReader(fileReader)) {
 
             while (bufferedReader.ready()){
-                stringBuilder.append(bufferedReader.readLine() + "\n");
+                stringBuilder.append(bufferedReader.readLine()).append("\n");
             }
 
             Pattern pattern = Pattern.compile("\\w+");
