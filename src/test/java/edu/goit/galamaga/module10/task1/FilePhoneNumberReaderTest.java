@@ -1,6 +1,6 @@
 package edu.goit.galamaga.module10.task1;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,12 +21,10 @@ class FilePhoneNumberReaderTest {
     @Test
     void givenSystemOutRedirection_whenInvokePrintln_thenOutputCaptorSuccess() {
 
-        String expected = "987-123-4567\n(123) 456-7890";
-        FilePhoneNumberReader filePhoneNumberReader = new FilePhoneNumberReader();
-        filePhoneNumberReader.printPhoneNumToConsole();
-//        System.out.println("Hello Baeldung Readers!!\n123\n321");
+        String expected = "987-123-4567\r\n(123) 456-7890";
+        FilePhoneNumberReader.printPhoneNumToConsole();
 
-        Assert.assertEquals(expected, outputStreamCaptor.toString().trim());
+        Assertions.assertEquals(expected, outputStreamCaptor.toString().trim());
     }
 
 
