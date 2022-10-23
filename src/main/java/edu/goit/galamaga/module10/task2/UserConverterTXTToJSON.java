@@ -11,11 +11,11 @@ import java.util.LinkedList;
  */
 public class UserConverterTXTToJSON {
 
-    public static void convertTXTToJSON() {
+    public static void convertTXTToJSON(String pathInputFile, String pathOutPutFile) {
 
         LinkedList<User> users = new LinkedList<>();
 
-        try (var fileReader = new FileReader("src/main/resources/User.txt");
+        try (var fileReader = new FileReader(pathInputFile);
              var bufferedReader = new BufferedReader(fileReader)) {
 
             while (bufferedReader.ready()) {
@@ -33,7 +33,7 @@ public class UserConverterTXTToJSON {
             System.out.println(e.getMessage());
         }
 
-        try (var fileWriter = new FileWriter("src/main/resources/User.json")) {
+        try (var fileWriter = new FileWriter(pathOutPutFile)) {
 
             fileWriter.write(new Gson().toJson(users));
             fileWriter.flush();

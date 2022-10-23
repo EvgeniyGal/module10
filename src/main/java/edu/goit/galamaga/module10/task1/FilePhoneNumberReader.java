@@ -12,20 +12,20 @@ import java.util.regex.Pattern;
  */
 public class FilePhoneNumberReader {
 
-    public static void printPhoneNumToConsole() {
+    public static void printPhoneNumToConsole(String path) {
 
         for (String phoneNumber :
-                getPhoneNumbers()) {
+                getPhoneNumbers(path)) {
             System.out.println(phoneNumber);
         }
 
     }
 
-    private static List<String> getPhoneNumbers() {
+    private static List<String> getPhoneNumbers(String path) {
 
         ArrayList<String> phoneNumbers = new ArrayList<>();
 
-        try (FileReader fileReader = new FileReader("src/main/resources/PhoneNumbers.txt");
+        try (FileReader fileReader = new FileReader(path);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
 
             while (bufferedReader.ready()) {

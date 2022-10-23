@@ -10,10 +10,10 @@ class UserConverterTXTToJSONTest {
     @Test
     void convertTXTToJSONTest(){
 
-        UserConverterTXTToJSON.convertTXTToJSON();
+        UserConverterTXTToJSON.convertTXTToJSON("src/test/resources/User.txt", "src/test/resources/User.json");
 
-        File expectedFile = new File("src/main/resources/ExpectedUser.json");
-        File actualFile = new File("src/main/resources/User.json");
+        File expectedFile = new File("src/test/resources/ExpectedUser.json");
+        File actualFile = new File("src/test/resources/User.json");
 
         assertThat(actualFile).hasSameContentAs(expectedFile);
 

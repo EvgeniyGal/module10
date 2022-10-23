@@ -21,7 +21,7 @@ class WordsCounterTest {
 
         String expected = "the 4\r\nday 1\r\nis 3\r\nsunny 2";
 
-        WordsCounter.countWords();
+        WordsCounter.countWords("src/test/resources/Words.txt");
 
         Assertions.assertEquals(expected, outputStreamCaptor.toString().trim());
 

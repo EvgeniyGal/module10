@@ -16,12 +16,12 @@ public class WordsCounter {
     /**
      * This method counts words in Words.txt
      */
-    public static void countWords() {
+    public static void countWords(String path) {
 
         LinkedHashMap<String, Integer> words = new LinkedHashMap<>();
         StringBuilder stringBuilder = new StringBuilder();
 
-        try (var fileReader = new FileReader("src/main/resources/Words.txt");
+        try (var fileReader = new FileReader(path);
              var bufferedReader = new BufferedReader(fileReader)) {
 
             while (bufferedReader.ready()){

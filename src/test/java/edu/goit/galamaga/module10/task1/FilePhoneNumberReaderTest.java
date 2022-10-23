@@ -19,7 +19,7 @@ class FilePhoneNumberReaderTest {
     void getPhoneNumbersTest() {
 
         String expected = "987-123-4567\r\n(123) 456-7890";
-        FilePhoneNumberReader.printPhoneNumToConsole();
+        FilePhoneNumberReader.printPhoneNumToConsole("src/test/resources/PhoneNumbers.txt");
 
         Assertions.assertEquals(expected, outputStreamCaptor.toString().trim());
     }
