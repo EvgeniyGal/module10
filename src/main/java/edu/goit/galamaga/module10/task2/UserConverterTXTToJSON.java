@@ -5,6 +5,10 @@ import com.google.gson.Gson;
 import java.io.*;
 import java.util.LinkedList;
 
+/**
+ * This class creates User objects from the data in User.txt and then
+ * converts those objects to Json format.
+ */
 public class UserConverterTXTToJSON {
 
     public static void convertTXTToJSON() {
@@ -38,7 +42,6 @@ public class UserConverterTXTToJSON {
             throw new RuntimeException(e);
         }
 
-
     }
 
     private static class User {
@@ -50,7 +53,6 @@ public class UserConverterTXTToJSON {
             this.name = name;
             this.age = age;
         }
-
 
     }
 }

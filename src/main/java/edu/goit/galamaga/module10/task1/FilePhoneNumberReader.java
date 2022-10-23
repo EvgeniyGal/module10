@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class reads phone numbers from PhoneNumbers.txt, check form correct formats
+ * and then print to console.
+ */
 public class FilePhoneNumberReader {
 
     public static void printPhoneNumToConsole() {

@@ -8,8 +8,14 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class provides methods that count words from different stream.
+ */
 public class WordsCounter {
 
+    /**
+     * This method counts words in Words.txt
+     */
     public static void countWords() {
 
         LinkedHashMap<String, Integer> words = new LinkedHashMap<>();
